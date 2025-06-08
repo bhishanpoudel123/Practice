@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Smart Video Navigator",
+    "version": "1.0",
+    "description": "Increment, decrement, or set video number in the URL.",
+    "permissions": ["tabs"],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icons/video_48.png"
+      },
+      "default_title": "Smart Video Navigator"
+    },
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+  

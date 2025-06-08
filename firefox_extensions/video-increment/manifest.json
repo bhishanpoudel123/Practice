@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "URL Video Incrementer",
+  "version": "1.0",
+  "description": "Increments the number in the video URL and opens it in a new tab.",
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/next_48.png"
+    },
+    "default_title": "Next Video"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
