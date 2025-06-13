@@ -1,18 +1,24 @@
 {
-    "manifest_version": 2,
-    "name": "Smart Video Navigator",
-    "version": "1.0",
-    "description": "Increment, decrement, or set video number in the URL.",
-    "permissions": ["tabs"],
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "48": "icons/video_48.png"
-      },
-      "default_title": "Smart Video Navigator"
+  "manifest_version": 2,
+  "name": "Smart Video Navigator",
+  "version": "1.0",
+  "description": "Increment, decrement, or set video number in the URL.",
+  "permissions": ["tabs", "activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/video_48.png"
     },
-    "background": {
-      "scripts": ["background.js"]
+    "default_title": "Smart Video Navigator"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "applications": {
+    "gecko": {
+      "id": "smart-video-navigator@example.com",
+      "strict_min_version": "57.0"
     }
   }
-  
+}

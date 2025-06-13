@@ -2,17 +2,41 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Video Navigator</title>
+  <title>Smart Video Navigator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>Smart Video Navigator</h2>
-  <div class="controls">
-    <button id="decrement">-1</button>
-    <input type="text" id="custom-number" placeholder="Enter number" />
-    <button id="increment">+1</button>
+  
+  <div id="current-info" class="current-info"></div>
+
+  <!-- Episode Controls -->
+  <div class="section">
+    <h3>Episode</h3>
+    <div class="controls">
+      <button id="episode-decrement" title="Previous episode">-1</button>
+      <input type="number" id="episode-number" placeholder="Episode #" min="1" />
+      <button id="episode-increment" title="Next episode">+1</button>
+    </div>
+    <button id="go-to-episode" class="go-button" title="Go to specific episode">Go to Episode</button>
   </div>
-  <button id="go-to-number">Go</button>
+
+  <!-- Season Controls (shown only for season/episode URLs) -->
+  <div id="season-controls" class="section">
+    <h3>Season</h3>
+    <div class="controls">
+      <button id="season-decrement" title="Previous season (same episode)">-1</button>
+      <input type="number" id="season-number" placeholder="Season #" min="1" />
+      <button id="season-increment" title="Next season (same episode)">+1</button>
+    </div>
+    <button id="go-to-season" class="go-button" title="Go to specific season">Go to Season</button>
+    
+    <div class="season-navigation">
+      <button id="prev-season" class="nav-button prev" title="Previous season, episode 1">← Prev Season</button>
+      <button id="next-season" class="nav-button next" title="Next season, episode 1">Next Season →</button>
+    </div>
+  </div>
+
   <p id="status"></p>
 
   <script src="popup.js"></script>
